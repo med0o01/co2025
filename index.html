@@ -1,18 +1,51 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Search Engine</title>
+    <title>محرك البحث</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+        }
+        #logo {
+            font-size: 2em;
+            margin: 0;
+        }
+        #nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        #nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        #nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div id="page-wrapper">
         <!-- Header -->
         <section id="header">
             <div class="container">
-                <h1 id="logo"><a href="index.html">Search Engine</a></h1>
-                <p>Search for anything you like!</p>
+                <h1 id="logo"><a href="index.html">محرك البحث</a></h1>
+                <p>ابحث عن أي شيء تريده!</p>
                 <nav id="nav">
                     <ul>
                         <li><a href="index.html">الرئيسية</a></li>
@@ -29,8 +62,8 @@
         <section id="search">
             <div class="container">
                 <form id="search-form">
-                    <input type="text" id="search-query" placeholder="Enter search query..." />
-                    <button type="submit">Search</button>
+                    <input type="text" id="search-query" placeholder="أدخل استعلام البحث..." />
+                    <button type="submit">بحث</button>
                 </form>
                 <div id="search-results"></div>
             </div>
@@ -43,7 +76,7 @@
         document.getElementById('search-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const query = document.getElementById('search-query').value;
-            document.getElementById('search-results').innerHTML = '<p>Searching for: ' + query + '</p>';
+            document.getElementById('search-results').innerHTML = '<p>جاري البحث عن: ' + query + '</p>';
             // Implement search logic here
         });
     </script>
